@@ -1,2 +1,1 @@
-# openapi-docs-using-redoc
-OpenAPI docs using ReDoc
+# OpenAPI docs using ReDoc
