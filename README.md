@@ -1,4 +1,4 @@
-# user-service-openapi OpenAPI Definition
+# OpenAPI Definition
 
 ## Working on your OpenAPI Definition
 
