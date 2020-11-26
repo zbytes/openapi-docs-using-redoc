@@ -10,7 +10,7 @@ info:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
-    url: 'https://redocly.github.io/openapi-template/logo.png'
+    url: 'https://raw.githubusercontent.com/zbytes/zbytes.github.io/master/backup/logos/logo.png'
   description: >
     This is an **example** API to demonstrate features of OpenAPI specification
 
@@ -53,18 +53,20 @@ externalDocs:
   description: Find out how to create a GitHub repo for your OpenAPI definition.
   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  - name: Echo
-    description: Example echo operations
   - name: User
     description: Operations about user
 servers:
   - url: 'http://example.com/api/v1'
   - url: 'https://example.com/api/v1'
 paths:
+  '/users':
+    $ref: 'paths/users.yaml'
   '/users/{username}':
     $ref: 'paths/users@{username}.yaml'
-  /echo:
-    $ref: paths/echo.yaml
+  '/products':
+    $ref: 'paths/products.yaml'
+  '/products/{productId}':
+    $ref: 'paths/products@{productId}.yaml'
 components:
   securitySchemes:
     main_auth:

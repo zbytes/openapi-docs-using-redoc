@@ -1,0 +1,7 @@
+type: object
+properties:
+  productName:
+    description: Product name
+    type: string
+    minLength: 4
+    example: Apple

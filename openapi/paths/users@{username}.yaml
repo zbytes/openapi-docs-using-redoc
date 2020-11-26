@@ -1,15 +1,9 @@
-parameters:
-  - name: pretty_print
-    in: query
-    description: Pretty print response
-    schema:
-      type: boolean
 get:
   tags:
     - User
   summary: Get user by user name
   description: |
-    Some description of the operation. 
+    Some description of the operation.
     You can use `markdown` here.
   operationId: getUserByName
   parameters:
@@ -75,3 +69,24 @@ put:
           $ref: ../components/schemas/User.yaml
     description: Updated user object
     required: true
+delete:
+  tags:
+    - User
+  summary: Deleted user
+  description: This can only be done by the logged in user.
+  operationId: deleteUser
+  parameters:
+    - name: username
+      in: path
+      description: The name that needs to be deleted
+      required: true
+      schema:
+        type: string
+  security:
+    - main_auth:
+        - 'write:users'
+  responses:
+    '200':
+      description: OK
+    '404':
+      description: User not found
