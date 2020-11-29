@@ -59,6 +59,8 @@ put:
       description: Invalid user supplied
     '404':
       description: User not found
+    '403':
+      description: Forbidden
   requestBody:
     content:
       application/json:

@@ -53,6 +53,8 @@ put:
       description: Invalid product supplied
     '404':
       description: Product not found
+    '403':
+      description: Forbidden
   requestBody:
     content:
       application/json:

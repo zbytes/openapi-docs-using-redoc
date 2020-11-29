@@ -57,6 +57,8 @@ post:
       description: OK
     '400':
       description: Invalid product supplied
+    '403':
+      description: Forbidden
   requestBody:
     content:
       application/json:
