@@ -421,6 +421,8 @@ components:
           scopes:
             'read:users': read users info
             'write:users': modify or remove users
+            'read:products': read products info
+            'write:products': modify or remove products
     api_key:
       type: apiKey
       in: header
